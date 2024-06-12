@@ -15,7 +15,8 @@ function getAlunosEstrela(){
     return alunosEstrela;
 }
 function postAlunosNovos(aluno){
-    novoAluno(aluno);
+    const {nome} = aluno;
+    novoAluno(nome);
 }
 
 module.exports = {

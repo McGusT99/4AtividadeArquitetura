@@ -8,7 +8,8 @@ router.get('/alunos', function (req, res) {
     res.send(alunosEstrela);
 });
 router.post('/alunos', function (req, res){
-    alunoNovo= alunosService.postAlunosNovos();
+    alunoNovo= req.body
+    alunosService.postAlunosNovos(alunoNovo);
     res.send("Aluno cadastrado")
 });
 
